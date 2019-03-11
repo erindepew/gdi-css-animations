@@ -229,6 +229,178 @@
         </ul>
     </section>
 
+    <!-- Transforms -->
+
+    <section data-background="#f05b62">
+        <h1 style="color: #fafafa;">Transforms</h1>
+    </section>
+
+    <section>
+        <h3>Transforms</h3>
+        <p>Modify an object in the browser coordinate space.</p>
+        //* example image
+    </section>
+
+    <section>
+        <h3>Transforms</h3>
+        <ul>
+          <li>Rotate</li>
+          <li>Scale</li>
+          <li>Skew</li>
+          <li>Translate</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Transform Cheat Sheet</h3>
+        <table style="width:100%; border: 1px solid; border-collapse: collapse; ">
+          <tr>
+            <th style="border: 1px solid; padding: 10px;">Property and Values</th>
+            <th style="border: 1px solid; padding: 10px;">Example</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid; padding: 10px;">transform: scale(sx, sy)</td>
+            <td style="border: 1px solid; padding: 10px;">scale(2); scale(0.5, 1);</td>
+          <tr>
+              <td style="border: 1px solid; padding: 10px;">transform: rotate(angle)</td>
+              <td style="border: 1px solid; padding: 10px;">rotate(45deg); rotate(-90deg);</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid; padding: 10px;">transform: translate(ax, ay)</td>
+            <td style="border: 1px solid; padding: 10px;">translate(5px); translate(0, 5px);</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid; padding: 10px;">transform: skew(angle, angle)</td>
+            <td style="border: 1px solid; padding: 10px;">skew(30deg, 20deg);</td>
+          </tr>
+          </table>
+      </section>
+      <section>
+          <h3>Develop It!</h3>
+          <ul>
+            //* fill this in
+         </ul>
+      </section>
+      <section data-background="#f05b62">
+          <h1 style="color: #fafafa;">@keyframes</h1>
+      </section>
+      <section>
+          <h3>@keyframes</h3>
+          <p>Define intermediate steps in a CSS animation sequence for more complex animations.</p>
+          //* example image
+      </section>
+      <section>
+          <h3>@keyframes</h3>
+          <ul>
+          <li>@keyframes: Defining the stages and styles of the animation</li>
+          <li>animation property: Applying the custom @keyframes animation to a specific element using the CSS animation property</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Creating a keyframe</h3>
+          <p> Each @keyframes is composed of:</p>
+          <ul>
+          <li>Name: This should describe the animation, for example, bounceIn.</li>
+          <li>Stages of animation: Each stage is represented as a percentage.
+            0% represents the beginning state and 100% represents the ending state. Multiple states can be added in between.</li>
+            <li>CSS Properties: CSS properties defined for each stage of the animation timeline.</li>
+          </ul>
+      </section>
+      <section>
+          <h3>Creating a keyframe</h3>
+          //* example code
+      </section>
+
+      <section>
+          <h3>Applying animation to an element</h3>
+          <p> Once an @keyframes is defined, you must add these two animation properties for the animation to take effect:</p>
+          <ul>
+          <li>animation-name: The name of the animation, defined in the @keyframes</li>
+          <li>animation-duration: The duration of the animation, in seconds (e.g., 5s).</li>
+          </ul>
+      </section>
+
+      <section>
+          <h3>Applying animation to an element</h3>
+          //* example code
+      </section>
+
+      <section>
+          <h3>Additional animation properties</h3>
+          <p>The two required @keyframes properties are animation-name and animation-duration but there are several more to choose from:</p>
+          <ul>
+            <li>animation-timing-function</li>
+            <li>animation-delay</li>
+            <li>animation-iteration-count</li>
+            <li>animation-direction</li>
+            <li>animation-play-state</li>
+          </ul>
+      </section>
+
+      <section>
+          <h3>Additional animation properties</h3>
+          <table style="width:100%; border: 1px solid; border-collapse: collapse; ">
+            <tr>
+              <th style="border: 1px solid; padding: 10px;">Property</th>
+              <th style="border: 1px solid; padding: 10px;">Values</th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid; padding: 10px;">animation-timing-function</td>
+              <td style="border: 1px solid; padding: 10px;">ease, linear, ease-in, ease-out, ease-in-out</td>
+            <tr>
+                <td style="border: 1px solid; padding: 10px;">animation-delay</td>
+                <td style="border: 1px solid; padding: 10px;">Time in seconds. Example: 1s;</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid; padding: 10px;">animation-iteration-count</td>
+              <td style="border: 1px solid; padding: 10px;">Number of times. Ex: 1 or infinite</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid; padding: 10px;">animation-direction</td>
+              <td style="border: 1px solid; padding: 10px;">reverse, alternate, alternate-reverse</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid; padding: 10px;">animation-play-state</td>
+                <td style="border: 1px solid; padding: 10px;">playing, paused</td>
+              </tr>
+            </table>
+        </section>
+      <section>
+          <h3>Develop It!</h3>
+          <ul>
+            <li>Create your own @keyframes named changeColor (exact name is important!) that changes
+              the background color to purple, then magenta, then blue</li>
+            <li>Add the changeColor animation to the header element</li>
+         </ul>
+      </section>
+
+<!--- Sprite sheet animations: Day 2 -->
+
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">Sprite Sheet Animations</h1>
+</section>
+
+<section>
+    <h3>Sprite sheet animations</h3>
+    //* example image
+</section>
+
+<section>
+    <h3>Steps()</h3>
+    <p>breaks an animation or transition into segments, rather than one continuous transition from one state to another</p>
+    //* example code
+</section>
+
+<section>
+    <h3>Develop It!</h3>
+    <ul>
+      <li></li>
+   </ul>
+</section>
+
+
+
+
 
 <section>
   <h2>Resources</h2>
