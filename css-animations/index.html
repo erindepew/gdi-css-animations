@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Intro to CSS Animations Girl Develop It NYC</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Erin Depew">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor-->
+    <link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
+    <link rel="stylesheet" href="css/slides.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="reveal/favicon.ico" />
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides" styles="width: 1500px">
+            <!-- Opening -->
+            <section>
+                <img src="images/gdi_logo_badge.png" style="padding: 10px; width:400px;" alt="gdi" />
+                <h3>Intro to CSS Animations</h3>
+            </section>
+            <section>
+                <h2>Welcome!</h2>
+                <h4 class="blue">Wifi Info</h4>
+                <p>
+                    <strong>Network: </strong></p>
+                <p>
+                    <strong>Password: </strong></p>
+                <br/>
+                <h3>Download workshop files <a href="../workshop-files.zip" download> <strong>here</strong></a></h3>
+            </section>
+            <section>
+                <h2>Thanks to our host Flatiron School</h2>
+            </section>
+            <section>
+                <p>All slides are available at:</p>
+                <a href="https://erindepew.github.io/gdi-css-animations/#/">https://erindepew.github.io/gdi-css-animations/#/</a></p>
+            </section>
+            <!-- Welcome-->
+            <section class="hide-pdf">
+                <h3>Welcome!</h3>
+                <div class="left-align">
+                    <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+                </div>
+            </section>
+            <section class="hide-pdf">
+              <h3>House Rules</h3>
+              <div class="left-align">
+                  <ul>
+                      <li class="fragment">We are here for you!</li>
+                      <li class="fragment">Every question is important</li>
+                      <li class="fragment">Help each other</li>
+                      <li class="fragment">Have fun</li>
+                  </ul>
+              </div>
+          </section>
+            <section class="hide-pdf">
+                <h3>Thank you to our Teaching Assistants today</h3>
+            </section>
+            <section class="hide-pdf">
+                <h3>A little about your instructor</h3>
+                <ul>
+                  <li class="fragment">2 years of design experience</li>
+                  <li class="fragment">5 years of frontend dev experience</li>
+                  <li class="fragment">Currently working at Spotify on R&amp;D</li>
+              </ul>
+            </section>
+            <section class="hide-pdf">
+                <h3>Now it's all about you!</h3>
+                <ul>
+                    <li class="fragment">Tell us who you are.</li>
+                    <li class="fragment">What do you hope to get out of this class?</li>
+            </section>
+            <section>
+                <h3>We will be adding flair to a portfolio site and creating game development animations</h3>
+            </section>
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Workshop Files</h1>
+            </section>
+            <section>
+              <h3>Workshop Files</h3>
+              <ul>
+                  <li>Sample images and sprites</li>
+                  <li>Blank index.html file</li>
+                  <li>Completed demos as reference</li>
+              </ul>
+          </section>
+
+ <!--- Introduction -->
+          <section data-background="#f05b62">
+            <h1 style="color: #fafafa;">Why Use Animations and Transitions?</h1>
+        </section>
+            <section>
+                <h3>Highlight interactions with microinteractions/h3>
+                  //*example image
+            </section>
+            <section>
+              <h3>Introduce new content</h3>
+                //*example image
+          </section>
+          <section>
+            <h3>Tell a story</h3>
+              //* example image
+        </section>
+          <section>
+            <h3>Overall, just try to avoid this:</h3>
+            //** make example gif http://www.wonder-tonic.com/geocitiesizer/
+        </section>
+        <section>
+          <h3>Animation and Transition Inspiration</h3>
+          //** list of examples
+      </section>
+<!--- Transitions -->
+      <section data-background="#f05b62">
+        <h1 style="color: #fafafa;">Transitions</h1>
+    </section>
+    <section>
+      <h3>Transitions</h3>
+      <p>Smoothly interpolate between a beginning state and end state when triggered by a specific event</p>
+      //* example image
+  </section>
+  <section>
+    <h3>Transitions</h3>
+    //* example code
+</section>
+  <section>
+    <h3>Transition Properties</h3>
+    <ul>
+      <li>transition-property</li>
+      <li>transition-duration</li>
+      <li>transition-delay</li>
+      <li>transition-timing-function</li>
+  </ul>
+</section>
+<section>
+    <h3>Transition Cheat Sheet</h3>
+    <table style="width:100%; border: 1px solid; border-collapse: collapse; ">
+      <tr>
+        <th style="border: 1px solid; padding: 10px;">Property</th>
+        <th style="border: 1px solid; padding: 10px;">Value</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid; padding: 10px;">transition-property</td>
+        <td style="border: 1px solid; padding: 10px;"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">CSS property</a></td>
+      </tr>
+      <tr>
+          <td style="border: 1px solid; padding: 10px;">transition-duration</td>
+          <td style="border: 1px solid; padding: 10px;">Time in seconds. Example: 1s</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid; padding: 10px;">transition-delay</td>
+        <td style="border: 1px solid; padding: 10px;">Time in seconds. Example: 1s</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid; padding: 10px;">transition-timing-function</td>
+        <td style="border: 1px solid; padding: 10px;">ease, linear, ease-in, ease-out, ease-in-out</td>
+      </tr>
+      </table>
+  </section>
+    <section>
+        <h3>Transition-timing-function</h3>
+        <p>Ease: </p>
+        //* example image
+    </section>
+    <section>
+        <h3>Transition-timing-function</h3>
+        <p>Linear: </p>
+        //* example image
+    </section>
+    <section>
+        <h3>Transition-timing-function</h3>
+        <p>Ease-in: </p>
+        //* example image
+    </section>
+    <section>
+        <h3>Transition-timing-function</h3>
+        <p>Ease-out: </p>
+        //* example image
+    </section>
+    <section>
+        <h3>Transition-timing-function</h3>
+        <p>Ease-in-out: </p>
+        //* example image
+    </section>
+
+    <section>
+        <h3>Transition Triggers</h3>
+        <ul>
+          <li>Hover</li>
+          <li>Mouse click</li>
+          <li>Focus state</li>
+          <li>Active state</li>
+          <li>Changes to the element, e.g. adding or removing a class</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Develop It!</h3>
+        <ul>
+          <li>Use transition-property to change the hover state of the images</li>
+          <li>Add a transition-duration of 2 seconds</li>
+          <li>Add a transition-delay of 1 second</li>
+          <li>Bonus: add a transition-timing-function to make it pretty</li>
+        </ul>
+    </section>
+
+
+<section>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="http://webtypography.net/intro/">The Elements of Typographic Style Applied to the Web</a></li>
+    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+    <li><a href="http://alistapart.com/">A List Apart</a></li>
+    <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
+    <li><a href="https://www.w3.org/standards/">W3C</a>
+    <li><a href="https://www.w3.org/TR/selectors-4/">Level 4 Selectors</a>
+    <li><a href="https://caniuse.com/">Can I Use... CSS property support</a>
+    <li><a href="http://html5doctor.com/element-index/">HTML5 Doctor for semantic elements</a>
+    <li><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en-US">Chrome developer plugin</a>
+
+  </ul>
+  </section>
+  <section>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grid</a>
+      <li><a href="https://css-tricks.com/almanac/properties/p/position/">CSS position property</a>
+      <li><a href="https://codepen.io/geoffgraham/pen/ybVzeX">CSS position: sticky demo</a>
+      <li><a href="https://jakearchibald.github.io/svgomg/">SVG optimizer</a>
+      <li><a href="http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support">Flexible centered menus demo</a>
+      <li><a href="http://alistapart.com/event/web-typography-layout-past-present-future">Web Typography: past, present, and future</a>
+      <li><a href="http://www.google.com/fonts">Google Fonts</a>
+      <li><a href="http://hex2rgba.devoth.com/"> Hex to RGBA </a>
+      <li><a href="http://www.colorzilla.com/gradient-editor/">Gradient generator</a>
+    </ul>
+  </section>
+  <section>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>
+      <li><a href="http://leaverou.github.com/animatable/">Animatable properties examples</a>
+      <li><a href="http://www.w3.org/TR/css3-transitions/#animatable-css">Animatable properties </a>
+      <li><a href="http://cubic-bezier.com/">Cubic Bezier</a>
+      <li><a href="http://css3generator.com/">CSS3 Generator</a>
+      <li><a href="http://alistapart.com/article/responsive-web-design">Responsive Web Design</a>
+      <li><a href="http://getbootstrap.com/">Bootstrap</a>
+      <li><a href="http://foundation.zurb.com/">Foundation</a>
+      <li><a href="https://semantic-ui.com/">Semantic UI</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="http://materializecss.com/">Materialize</a></li>
+      <li><a href="http://www.material-ui.com/#/">Material UI</a></li>
+      <li><a href="https://purecss.io/">Pure CSS</a></li>
+      <li><a href="http://getskeleton.com/">Skeleton</a></li>
+      <li><a href="https://getuikit.com/">UIkit</a></li>
+      <li><a href="https://milligram.io/">Milligram</a></li>
+  </ul>
+</section>
+        </div>
+        <footer>
+            <div class="copyright">
+                Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It RDU --
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+                    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/slides.js"></script>
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        width: 1500,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'reveal/lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/markdown/showdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'reveal/plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
+
+</body>
+
+</html>
