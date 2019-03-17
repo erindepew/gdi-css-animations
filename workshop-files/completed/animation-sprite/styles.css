@@ -1,0 +1,17 @@
+
+@keyframes play {
+  100% { background-position: -413px 0; }
+}
+
+body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.sprite {
+  width: 58px;
+  height: 90px;
+  background: url(sprites.gif) 0 0;
+  animation: play 0.8s steps(7) infinite;
+  margin: 0 auto;
+}

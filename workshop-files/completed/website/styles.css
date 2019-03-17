@@ -1,8 +1,21 @@
+
+@keyframes changeColor {
+  0%     {background-color:#402836;}
+  25%  {background-color:#A70267;}
+  75%  {background-color:#10487D;}
+  100%     {background-color:#402836;}
+}
+
 .header {
   width: 100%;
-  background-color: #413E4A;
+  background-color: #402836;
   height: 200px;
   text-align: center;
+  animation-name: changeColor;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
 
 .header-text {

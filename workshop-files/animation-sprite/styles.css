@@ -1,0 +1,12 @@
+
+body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.sprite {
+  background: url(sprites.gif) 0 0;
+  margin: 0 auto;
+  width: 413px;
+  height: 438px;
+}

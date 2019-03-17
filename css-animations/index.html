@@ -300,7 +300,21 @@
       </section>
       <section>
           <h3>Creating a keyframe</h3>
-          //* example code
+          <pre>
+            <code class="css">
+                @keyframes changeFontSize {
+                  0% {
+                    font-size: 10px;
+                  }
+                  30% {
+                    font-size: 15px;
+                  }
+                  100% {
+                    font-size: 12px;
+                  }
+                }
+            </code>
+          </pre>
       </section>
 
       <section>
@@ -314,7 +328,11 @@
 
       <section>
           <h3>Applying animation to an element</h3>
-          //* example code
+          <pre>
+              <code class="css">
+                  h1 { animation: changeFontSize 2s infinite; }
+              </code>
+            </pre>
       </section>
 
       <section>
@@ -378,80 +396,67 @@
 </section>
 
 <section>
+    <h3>Why use sprite sheet animations? </h3>
+    <p>Animating complex images and sequences with multiple colors</p>
+    <p>Need the ability to "loop" and repeat certain animation sequences in a DRY way</p>
+    <p>Most commonly used in HTML5 games</p>
+</section>
+
+<section>
     <h3>Steps()</h3>
     <p>breaks an animation or transition into segments, rather than one continuous transition from one state to another</p>
-    //* example code
+</section>
+
+<section>
+    <h3>Steps()</h3>
+    <pre><code class="css">
+      .sprite {
+        animation: play 0.8s steps(7) infinite;
+      }
+    </code></pre>
+</section>
+
+<section>
+    <h3>Sprite sheet</h3>
+    <img src="images/sprites.gif" style="padding: 10px; width:500px;" alt="sprite sheet" />
+</section>
+
+<section>
+    <h3>Animating sprites</h3>
+    <p>Creating a <a href="https://en.wikipedia.org/wiki/Zoopraxiscope">zoopraxiscope</a> using background-position and css @keyframes</p>
+    <img src="images/animated-race-horse.gif" style="padding: 10px; width:500px;" alt="animated race horse" />
 </section>
 
 <section>
     <h3>Develop It!</h3>
     <ul>
-      <li></li>
+      <li> Pick a character from the sprite sheet and animate it using steps(), @keyframes, and background-position </li>
+      <li> Use animation-direction property to reverse the animation</li>
+      <li> Bonus: change the animation to trigger on hover</li>
    </ul>
 </section>
 
+<!-- SVG animations -->
 
-
-
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">SVG Animations</h1>
+</section>
 
 <section>
-  <h2>Resources</h2>
-  <ul>
-    <li><a href="http://webtypography.net/intro/">The Elements of Typographic Style Applied to the Web</a></li>
-    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
-    <li><a href="http://alistapart.com/">A List Apart</a></li>
-    <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
-    <li><a href="https://www.w3.org/standards/">W3C</a>
-    <li><a href="https://www.w3.org/TR/selectors-4/">Level 4 Selectors</a>
-    <li><a href="https://caniuse.com/">Can I Use... CSS property support</a>
-    <li><a href="http://html5doctor.com/element-index/">HTML5 Doctor for semantic elements</a>
-    <li><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en-US">Chrome developer plugin</a>
-
-  </ul>
-  </section>
-  <section>
-    <h2>Resources</h2>
-    <ul>
-      <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grid</a>
-      <li><a href="https://css-tricks.com/almanac/properties/p/position/">CSS position property</a>
-      <li><a href="https://codepen.io/geoffgraham/pen/ybVzeX">CSS position: sticky demo</a>
-      <li><a href="https://jakearchibald.github.io/svgomg/">SVG optimizer</a>
-      <li><a href="http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support">Flexible centered menus demo</a>
-      <li><a href="http://alistapart.com/event/web-typography-layout-past-present-future">Web Typography: past, present, and future</a>
-      <li><a href="http://www.google.com/fonts">Google Fonts</a>
-      <li><a href="http://hex2rgba.devoth.com/"> Hex to RGBA </a>
-      <li><a href="http://www.colorzilla.com/gradient-editor/">Gradient generator</a>
-    </ul>
-  </section>
-  <section>
-    <h2>Resources</h2>
-    <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>
-      <li><a href="http://leaverou.github.com/animatable/">Animatable properties examples</a>
-      <li><a href="http://www.w3.org/TR/css3-transitions/#animatable-css">Animatable properties </a>
-      <li><a href="http://cubic-bezier.com/">Cubic Bezier</a>
-      <li><a href="http://css3generator.com/">CSS3 Generator</a>
-      <li><a href="http://alistapart.com/article/responsive-web-design">Responsive Web Design</a>
-      <li><a href="http://getbootstrap.com/">Bootstrap</a>
-      <li><a href="http://foundation.zurb.com/">Foundation</a>
-      <li><a href="https://semantic-ui.com/">Semantic UI</a></li>
-    </ul>
-  </section>
-  <section>
-    <h2>Resources</h2>
-    <ul>
-      <li><a href="http://materializecss.com/">Materialize</a></li>
-      <li><a href="http://www.material-ui.com/#/">Material UI</a></li>
-      <li><a href="https://purecss.io/">Pure CSS</a></li>
-      <li><a href="http://getskeleton.com/">Skeleton</a></li>
-      <li><a href="https://getuikit.com/">UIkit</a></li>
-      <li><a href="https://milligram.io/">Milligram</a></li>
-  </ul>
+    <h3>SVG animations</h3>
+    <img src="images/svg-animation.gif" style="padding: 10px; width:500px;" alt="SVG animation" />
 </section>
+
+<section>
+    <h3>Why use SVG animations?</h3>
+    <img src="images/svg-animation.gif" style="padding: 10px; width:500px;" alt="SVG animation" />
+</section>
+
+
         </div>
         <footer>
             <div class="copyright">
-                Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It RDU --
+                Intro to CSS Animations &hearts; Girl Develop It NYC --
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
                     <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
                 </a>

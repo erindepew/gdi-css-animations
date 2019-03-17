@@ -1,0 +1,81 @@
+div {
+  width: 250px;
+  max-height: 250px;
+  display: inline-block;
+}
+
+.eye {
+  animation: eye 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+circle.eye {
+  animation: pupil 3s ease-in-out infinite
+}
+
+@keyframes eye {
+  5%,
+  20% {
+    transform: scale(1, 1);
+    stroke-width: 2px;
+  }
+  10%,
+  15% {
+    transform: scale(1, 0);
+    stroke-width: 20px;
+  }
+}
+/*
+@keyframes pupil {
+  100%,
+  30% {
+    transform: scale(1, 1);
+  }
+  2%,
+  20% {
+    transform: scale(1.2, 1.2);
+  }
+  9%,
+  16% {
+    transform: scale(0, 0);
+  }
+  75%,
+  50%,
+  35% {
+    transform: translate(20px, -4px);
+  }
+  55%,
+  65% {
+    transform: translate(-20px, 5px);
+  }
+} */
+/*
+@keyframes blink {
+  0%,
+  10% {
+    opacity: 0
+  }
+  25%,
+  85% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+} */
+/*
+.white {
+  animation: blink 2.2s ease infinite;
+}
+
+.d2 {
+  animation-delay: .2s
+}
+
+.d3 {
+  animation-delay: .3s
+}
+
+.d4 {
+  animation-delay: .5s
+} */
