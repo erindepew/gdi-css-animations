@@ -1,0 +1,16 @@
+div {
+  width: 250px;
+  max-height: 250px;
+  display: inline-block;
+}
+.eye {
+  transform-origin: center;
+}
+
+.pupil {
+  transform-origin: center;
+}
+
+.lash {
+  transform-origin: center bottom;
+}

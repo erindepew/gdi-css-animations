@@ -397,9 +397,11 @@
 
 <section>
     <h3>Why use sprite sheet animations? </h3>
-    <p>Animating complex images and sequences with multiple colors</p>
-    <p>Need the ability to "loop" and repeat certain animation sequences in a DRY way</p>
-    <p>Most commonly used in HTML5 games</p>
+    <ul>
+      <li>Animating complex images and sequences with multiple colors</li>
+      <li>Need the ability to "loop" and repeat certain animation sequences in a DRY way</li>
+      <li>Most commonly used in HTML5 games</li>
+    </ul>
 </section>
 
 <section>
@@ -448,21 +450,53 @@
 </section>
 
 <section>
-    <h3>Why use SVG animations?</h3>
-    <img src="images/svg-animation.gif" style="padding: 10px; width:500px;" alt="SVG animation" />
+  <h3>Why use SVG animations?</h3>
+  <ul>
+    <li>Animating complex images and sequences with multiple colors</li>
+    <li>Can change the animation based on viewport and device</li>
+    <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL</a> API provides additional functionality beyond CSS</li>
+  </ul>
 </section>
 
+<section>
+    <h3>What is an SVG?</h3>
+    <ul>
+      <li>Stands for Scalable Vector Graphic</li>
+      <li>XML file that mathematically describes shapes</li>
+      <li>We can add classes and attributes to these entities in order to animate them!</li>
+    </ul>
+</section>
 
-        </div>
-        <footer>
-            <div class="copyright">
-                Intro to CSS Animations &hearts; Girl Develop It NYC --
-                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
-                    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
-                </a>
-            </div>
-        </footer>
-    </div>
+<section>
+    <h3>Animating SVG</h3>
+    <ul>
+      <li>Create a vector graphic in Illustrator or another image editing program</li>
+      <li>Upload to SVGOptimizer to clean up paths</li>
+      <li>Add classes and animate!</li>
+    </ul>
+    <pre><code class="svg">
+        <circle class="pupil" fill="#ff9500"cx="116.53" cy="123.07" r="40.5"></circle>
+        <circle class="pupil" fill="#825bf6" cx="117.68" cy="123.07" r="18"></circle>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Develop It!</h3>
+    <ul>
+      <li> Add an animation to the "lash" class and make the eye blink! </li>
+      <li> Bonus: Go through the steps of animating a new SVG by downloading an SVG, uploading to SVGO, adding classes to paths and animating them! </li>
+   </ul>
+</section>
+      </div>
+      <footer>
+          <div class="copyright">
+              Intro to CSS Animations &hearts; Girl Develop It NYC --
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+                  <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+              </a>
+          </div>
+      </footer>
+  </div>
 
 
     <script src="reveal/lib/js/head.min.js"></script>

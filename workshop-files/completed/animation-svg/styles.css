@@ -9,8 +9,15 @@ div {
   transform-origin: center;
 }
 
-circle.eye {
-  animation: pupil 3s ease-in-out infinite
+.pupil {
+  transform-origin: center;
+  animation: pupil 3s ease-in-out infinite;
+}
+
+
+.lash {
+  animation: lash 2s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
 @keyframes eye {
@@ -25,7 +32,7 @@ circle.eye {
     stroke-width: 20px;
   }
 }
-/*
+
 @keyframes pupil {
   100%,
   30% {
@@ -48,34 +55,18 @@ circle.eye {
   65% {
     transform: translate(-20px, 5px);
   }
-} */
-/*
-@keyframes blink {
-  0%,
-  10% {
-    opacity: 0
+}
+
+@keyframes lash {
+  0% {
+    transform: translate(0, 0);
   }
-  25%,
-  85% {
-    opacity: 1
+
+  75% {
+    transform: translate(0, -30px);
   }
+
   100% {
-    opacity: 0
+    transform: translate(0, 0);
   }
-} */
-/*
-.white {
-  animation: blink 2.2s ease infinite;
 }
-
-.d2 {
-  animation-delay: .2s
-}
-
-.d3 {
-  animation-delay: .3s
-}
-
-.d4 {
-  animation-delay: .5s
-} */
