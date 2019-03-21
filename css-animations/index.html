@@ -459,7 +459,7 @@
 <!--- Day 2 -->
 
 <section data-background="#f05b62">
-    <h1 style="color: #fafafa;">Review</h1>
+    <h1 style="color: #fafafa;">Day 1 Review</h1>
 </section>
 
 <section>
@@ -500,11 +500,6 @@
   </ul>
 </section>
 <section>
-    <h3>SVG vs. Bitmap</h3>
-    <img src="images/Bitmap_VS_SVG.svg.png" style="padding: 10px; width:500px;" alt="SVG animation" />
-</section>
-
-<section>
     <h3>What is an SVG?</h3>
     <ul>
       <li>Stands for Scalable Vector Graphic</li>
@@ -512,7 +507,10 @@
       <li>We can add classes and attributes to these entities in order to animate them!</li>
     </ul>
 </section>
-
+<section>
+  <h3>SVG vs. Bitmap</h3>
+  <img src="images/Bitmap_VS_SVG.svg.png" style="padding: 10px; width:500px;" alt="SVG animation" />
+</section>
 <section>
     <h3>SVG Inspiration</h3>
     <ul>
@@ -565,8 +563,6 @@
         <svg height="210" width="400"> <path d="M150 0 L75 200 L225 200 Z" /> </svg>
     </code></pre>
 </section>
-
-
 <section>
     <h3>Anatomy of an SVG</h3>
     <p>Note: unlike a regular HTML element, most of the styling behavior is contained in an SVG element's attributes. We can still modify most of them with CSS though!</p>
@@ -588,7 +584,7 @@
 <section>
     <h3>Develop It!</h3>
     <ul>
-      <li> Create an animation keyframe to change the fill color of one of the circles </li>
+      <li> Add a css transition to change the fill color of one of the circles on hover </li>
       <li> Create an animation keyframe to change the position of one of the circles </li>
    </ul>
 </section>
@@ -641,17 +637,99 @@
 </section>
 <section>
     <h3>Simple SMIL Animation</h3>
-    <ul>
-        <li> xlink: specifying it's applied to "#my-circle" </li>
-        <li> attributeName: we're animating "cx" or the center X position of our SVG</li>
-        <li> from: start value for attribute </li>
-        <li> to: end value for attribute </li>
-        <li> dur: duration </li>
-        <li> begin: what action begins the animation </li>
-        <li> fill: what happens after the animation is complete </li>
-     </ul>
+      <table style="width:100%; border: 1px solid; border-collapse: collapse; ">
+        <tr>
+          <th style="border: 1px solid; padding: 10px;">SMIL Attribute</th>
+          <th style="border: 1px solid; padding: 10px;">What it does</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid; padding: 10px;">xlink</td>
+          <td style="border: 1px solid; padding: 10px;">specifying it's applied to "#my-circle"</td>
+        <tr>
+            <td style="border: 1px solid; padding: 10px;">attributeName</td>
+            <td style="border: 1px solid; padding: 10px;">we're animating "cx" or the center-X position of our SVG</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid; padding: 10px;">from</td>
+          <td style="border: 1px solid; padding: 10px;">start value for the attribute</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid; padding: 10px;">to</td>
+          <td style="border: 1px solid; padding: 10px;">end value for the attribute</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid; padding: 10px;">begin</td>
+            <td style="border: 1px solid; padding: 10px;">what action begins the animation</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid; padding: 10px;">fill</td>
+            <td style="border: 1px solid; padding: 10px;">what happens after the animation is complete</td>
+          </tr> 
+        </table>
 </section>
 
+<section>
+  <h3>SMIL vs. @keyframes</h3>
+  <table style="width:100%; border: 1px solid; border-collapse: collapse; ">
+    <tr>
+      <th style="border: 1px solid; padding: 10px;">@keyframe Property</th>
+      <th style="border: 1px solid; padding: 10px;">SMIL Property</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid; padding: 10px;">animation-timing-function</td>
+      <td style="border: 1px solid; padding: 10px;">calcMode: discrete, paced, or spline</td>
+    <tr>
+        <td style="border: 1px solid; padding: 10px;">animation-delay</td>
+        <td style="border: 1px solid; padding: 10px;">begin: user interaction or other animation</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid; padding: 10px;">animation-iteration-count</td>
+      <td style="border: 1px solid; padding: 10px;">repeatCount: number of times or indefinite</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid; padding: 10px;">animation-direction</td>
+      <td style="border: 1px solid; padding: 10px;">keyTimes... sort of</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid; padding: 10px;">animation-play-state</td>
+        <td style="border: 1px solid; padding: 10px;">N/A</td>
+      </tr>
+    </table>
+</section>
+<section>
+  <h3>SMIL vs. Keyframes</h3>
+  <p>@keyframes => values and keyTimes</p>
+  <pre><code class="svg">
+<animate
+xlink:href="#orange-circle"
+...
+values="50; 490; 350; 450"
+keyTimes="0; 0.5; 0.8; 1" />
+  </code></pre>
+</section>
+
+<section>
+  <h3>SMIL vs. Keyframes</h3>
+  <p>@keyframes => values and keyTimes</p>
+  <pre>
+    <code class="css">
+        @keyframes changeWidth {
+          0% {
+            width: 50px;
+          }
+          50% {
+            width: 490px;
+          }
+          80% {
+            width: 350px;
+          }
+          100% {
+            width: 450px;
+          }
+        }
+    </code>
+  </pre>
+</section>
 <section>
     <h3>Develop It!</h3>
     <ul>
@@ -698,8 +776,6 @@
           <animate xlink:href="#my-circle" ... begin="firstAnimation.start + 1s" id="secondAnimation"/>
     </code></pre>
 </section>
-
-
 <section>
     <h3>Develop It!</h3>
     <ul>
@@ -707,55 +783,52 @@
       <li>Sync up each circle's animation with it's inner circle's animation end or beginning</li>
    </ul>
 </section>
-
-
 <section>
-    <h3>SMIL vs. Keyframes</h3>
-    <ul>
-        <li>animation-iteration-count => repeatCount: number or indefinite</li>
-        <li>animation-timing-function => calcMode: discrete, paced, or spline</li>
-     </ul>
+  <h3>AnimateMotion</h3>
+  <p>Used to move an element along a path</p>
+  <img src="images/animateMotion.gif" style="padding: 10px; width:500px;" alt="SVG animation" />
 </section>
 
 <section>
-    <h3>SMIL vs. Keyframes</h3>
-    <p>@keyframes => values and keyTimes</p>
+  <h3>AnimateMotion: Paths</h3>
+  <p>We need to specify the path (another SVG element) the object should move along using the mpath attribute</p>
+  <pre><code class="svg">
+      <mpath xlink:href="#motionPath" />
+      <svg id="motionPath"></svg>
+  </code>
+  </pre>
+</section>
+<section>
+    <h3>AnimateMotion: Paths</h3>
+    <p>Then we need to add the animateMotion element to our SVG</p>
     <pre><code class="svg">
-  <animate
-  xlink:href="#orange-circle"
-  ...
-  values="50; 490; 350; 450"
-  keyTimes="0; 0.5; 0.8; 1" />
-    </code></pre>
-</section>
-
-<section>
-    <h3>SMIL vs. Keyframes</h3>
-    <p>@keyframes => values and keyTimes</p>
-    <pre>
-      <code class="css">
-          @keyframes changeWidth {
-            0% {
-              width: 50px;
-            }
-            50% {
-              width: 490px;
-            }
-            80% {
-              width: 350px;
-            }
-            100% {
-              width: 450px;
-            }
-          }
-      </code>
+      <animateMotion xlink:href="#circle" dur="1s" begin="click" fill="freeze">
+          <mpath xlink:href="#motionPath" />
+        </animateMotion>
+        <svg id="motionPath"></svg>
+    </code>
     </pre>
-</section>
+  </section>
+  <section>
+      <h3>Develop It!</h3>
+      <ul>
+        <li>Add one of the circles as an mpath link</li>
+        <li>Animate another circle to follow the path of the first circle</li>
+     </ul>
+  </section>
 
-
-<!-- animateMotion-->
-
-
+  <section>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="https://tympanus.net/codrops/"> CSS animation inspiration</a></li>
+        <li><a href="https://picsum.photos/"> Lorem Picsum</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/"> Mozilla Developer Web Docs</a></li>
+        <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL API</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">List of SVG attribute types</a></li>
+        <li><a href="https://jakearchibald.github.io/svgomg/"> SVGO Optimizer</a></li>
+        <li><a href="https://thenounproject.com/"> Free SVG icons and images</a></li>
+     </ul>
+  </section>
       </div>
       <footer>
           <div class="copyright">
@@ -766,8 +839,6 @@
           </div>
       </footer>
   </div>
-
-
     <script src="reveal/lib/js/head.min.js"></script>
     <script src="reveal/js/reveal.min.js"></script>
     <script src="js/jquery-1.8.2.min.js"></script>
