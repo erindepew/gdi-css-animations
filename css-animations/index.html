@@ -794,10 +794,15 @@ keyTimes="0; 0.5; 0.8; 1" />
   <p>We need to specify the path (another SVG element) the object should move along using the mpath attribute</p>
   <pre><code class="svg">
       <mpath xlink:href="#motionPath" />
-      <svg id="motionPath"></svg>
+      <svg id="motionPath" d="M 200 125 m -100 0 a 100 100 0 1 0 200 0 a 100 100 0 1 0 -200 0"></svg>
   </code>
   </pre>
 </section>
+<section>
+    <h3>AnimateMotion: Paths</h3>
+    <p>Note: the element must be a path and must have a "d=" attribute.</p>
+    <p>The path for a cirlce is d="M 200 125 m -100 0 a 100 100 0 1 0 200 0 a 100 100 0 1 0 -200 0"</p>
+  </section>
 <section>
     <h3>AnimateMotion: Paths</h3>
     <p>Then we need to add the animateMotion element to our SVG</p>
