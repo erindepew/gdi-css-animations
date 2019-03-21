@@ -456,6 +456,29 @@
    </ul>
 </section>
 
+<!--- Day 2 -->
+
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">Review</h1>
+</section>
+
+<section>
+    <h3>What did we learn?</h3>
+    <ul>
+      <li> Transition CSS styles on hover, click, active... </li>
+      <li> Transform elements using scale, translate, skew, rotate...</li>
+      <li> Create an animation keyframe and apply it to an element</li>
+      <li> Combine a keyframe animation with a transform and transition on hover</li>
+      <li> Rendering and using a sprite sheet</li>
+   </ul>
+</section>
+
+<section>
+  <p>That's a lot already</p>
+    <img src="images/tired-cat.webp" style="padding: 10px; width:500px;" alt="tired cat" />
+</section>
+
+
 <!-- SVG animations -->
 
 <section data-background="#f05b62">
@@ -472,8 +495,13 @@
   <ul>
     <li>Animating complex images and sequences with multiple colors</li>
     <li>Can change the animation based on viewport and device</li>
-    <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL</a> API provides additional functionality beyond CSS</li>
+    <li>Can render at any size unlike bitmap</li>
+    <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL</a> (Synchronized Multimedia Integration Language) API provides additional functionality beyond CSS</li>
   </ul>
+</section>
+<section>
+    <h3>SVG vs. Bitmap</h3>
+    <img src="images/Bitmap_VS_SVG.svg.png" style="padding: 10px; width:500px;" alt="SVG animation" />
 </section>
 
 <section>
@@ -486,25 +514,248 @@
 </section>
 
 <section>
+    <h3>SVG Inspiration</h3>
+    <ul>
+      <li><a href="https://codepen.io/sol0mka/pen/kzyjJ">Velocity.js logo</a></li>
+      <li><a href="https://codepen.io/ghepting/pen/xnezB">Handwriting</a></li>
+      <li><a href="https://codepen.io/sdras/details/xbyopy">Book of Kells</a></li>
+    </ul>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>svg: embeds SVG document, has its own x and y coordinates, height and width, and its own unique id</p>
+    <pre><code class="svg">
+        <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg"></svg>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    g: groups related graphical elements together, acts as a container</p>
+    <pre><code class="svg">
+        <g>
+          <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+          <g y="0" x="0" height="100%" width="100%" id="canvasGrid">
+            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+          </g>
+        </g>
+    </code></pre>
+</section>
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>rect: basic svg shape representing a rectangle</p>
+    <pre><code class="svg">
+        <rect id="svg_1" height="253" width="373" y="59" x="107.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>circle or ellipse: basic svg shape representing a circle</p>
+    <pre><code class="svg">
+        <circle id="circle1" stroke="#000" ry="119.5" rx="123.5" id="svg_6" cy="193.5" cx="298" fill-opacity="null" stroke-opacity="null" stroke-width="3" fill="#fff"/>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>path: defines a path of coordinates for a shape</p>
+    <pre><code class="svg">
+        <svg height="210" width="400"> <path d="M150 0 L75 200 L225 200 Z" /> </svg>
+    </code></pre>
+</section>
+
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>Note: unlike a regular HTML element, most of the styling behavior is contained in an SVG element's attributes. We can still modify most of them with CSS though!</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">List of SVG attribute types</a>
+</section>
+
+<section>
     <h3>Animating SVG</h3>
     <ul>
       <li>Create a vector graphic in Illustrator or another image editing program</li>
-      <li>Upload to SVGOptimizer to clean up paths</li>
+      <li>Upload to <a hread="https://jakearchibald.github.io/svgomg/">SVGOptimizer</a> to clean up paths</li>
       <li>Add classes and animate!</li>
     </ul>
     <pre><code class="svg">
-        <circle class="pupil" fill="#ff9500"cx="116.53" cy="123.07" r="40.5"></circle>
-        <circle class="pupil" fill="#825bf6" cx="117.68" cy="123.07" r="18"></circle>
+        <ellipse class="circle1" stroke="#000" ry="38" rx="37" cy="198" cx="302.5" stroke-opacity="null" stroke-width="3" fill="none"/>
     </code></pre>
 </section>
 
 <section>
     <h3>Develop It!</h3>
     <ul>
-      <li> Add an animation to the "lash" class and make the eye blink! </li>
-      <li> Bonus: Go through the steps of animating a new SVG by downloading an SVG, uploading to SVGO, adding classes to paths and animating them! </li>
+      <li> Create an animation keyframe to change the fill color of one of the circles </li>
+      <li> Create an animation keyframe to change the position of one of the circles </li>
    </ul>
 </section>
+
+<section>
+    <h3>Why use SMIL?</h3>
+    <ul>
+        <li> path data attributes ("d=''") can only be animated through SMIL, not CSS </li>
+        <li> SVGs cannot be animated via JS if embedded as an img or used as a background-image </li>
+        <li> Simpler and more declarative than JS animations </li>
+     </ul>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>animate: specifies animations to be applied to a specific attribute of the SVG it's nested inside</p>
+    <p>One animate tag = animating one attribute</p>
+    <pre><code class="svg">
+      <rect>
+        <animate attributeName="opacity"
+                 from="1" to="0" dur="5s" repeatCount="indefinite" />
+      </rect>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Anatomy of an SVG</h3>
+    <p>xlink: specifies the target of that animation if it's not nested inside </p>
+    <pre><code class="svg">
+      <rect id="my-rectangle"></rect>
+      <animate  xlink:href="#my-rectangle" attributeName="opacity"
+      from="1" to="0" dur="5s" repeatCount="indefinite" />
+    </code></pre>
+</section>
+
+
+<section>
+    <h3>Simple SMIL Animation</h3>
+    <pre><code class="svg">
+        <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+        <animate
+          xlink:href="#my-circle"
+          attributeName="cx"
+          from="50"
+          to="450"
+          dur="1s"
+          begin="click"
+          fill="freeze" />
+    </code></pre>
+</section>
+<section>
+    <h3>Simple SMIL Animation</h3>
+    <ul>
+        <li> xlink: specifying it's applied to "#my-circle" </li>
+        <li> attributeName: we're animating "cx" or the center X position of our SVG</li>
+        <li> from: start value for attribute </li>
+        <li> to: end value for attribute </li>
+        <li> dur: duration </li>
+        <li> begin: what action begins the animation </li>
+        <li> fill: what happens after the animation is complete </li>
+     </ul>
+</section>
+
+<section>
+    <h3>Develop It!</h3>
+    <ul>
+      <li>Change your circle keyframe animation to a SMIL animation using the animate tag</li>
+      <li>Bonus: add another animate element and animate another SVG attribute</li>
+   </ul>
+</section>
+
+<section>
+    <h3>Synchonizing SMIL Animations</h3>
+    <p> We can give each animation an ID</p>
+    <pre><code class="svg">
+        <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+        <animate xlink:href="#my-circle" ... id="firstAnimation"/>
+          <animate xlink:href="#my-circle" ... id="secondAnimation"/>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Synchonizing SMIL Animations</h3>
+    <p> We can also use an animation's end as a start point for another animation beginning</p>
+    <pre><code class="svg">
+        <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+        <animate xlink:href="#my-circle" ... begin="click" id="firstAnimation"/>
+          <animate xlink:href="#my-circle" ... begin="firstAnimation.end" id="secondAnimation"/>
+    </code></pre>
+</section>
+<section>
+    <h3>Synchonizing SMIL Animations</h3>
+    <p> or an animation's start as a start point for another animation beginning</p>
+    <pre><code class="svg">
+        <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+        <animate xlink:href="#my-circle" ... begin="click" id="firstAnimation"/>
+          <animate xlink:href="#my-circle" ... begin="firstAnimation.start" id="secondAnimation"/>
+    </code></pre>
+</section>
+
+<section>
+    <h3>Synchonizing SMIL Animations</h3>
+    <p> or an animation's start plus or minus an arbitrary time as a start point for another animation beginning</p>
+    <pre><code class="svg">
+        <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+        <animate xlink:href="#my-circle" ... begin="click" id="firstAnimation"/>
+          <animate xlink:href="#my-circle" ... begin="firstAnimation.start + 1s" id="secondAnimation"/>
+    </code></pre>
+</section>
+
+
+<section>
+    <h3>Develop It!</h3>
+    <ul>
+      <li>Add an animation to each circle</li>
+      <li>Sync up each circle's animation with it's inner circle's animation end or beginning</li>
+   </ul>
+</section>
+
+
+<section>
+    <h3>SMIL vs. Keyframes</h3>
+    <ul>
+        <li>animation-iteration-count => repeatCount: number or indefinite</li>
+        <li>animation-timing-function => calcMode: discrete, paced, or spline</li>
+     </ul>
+</section>
+
+<section>
+    <h3>SMIL vs. Keyframes</h3>
+    <p>@keyframes => values and keyTimes</p>
+    <pre><code class="svg">
+  <animate
+  xlink:href="#orange-circle"
+  ...
+  values="50; 490; 350; 450"
+  keyTimes="0; 0.5; 0.8; 1" />
+    </code></pre>
+</section>
+
+<section>
+    <h3>SMIL vs. Keyframes</h3>
+    <p>@keyframes => values and keyTimes</p>
+    <pre>
+      <code class="css">
+          @keyframes changeWidth {
+            0% {
+              width: 50px;
+            }
+            50% {
+              width: 490px;
+            }
+            80% {
+              width: 350px;
+            }
+            100% {
+              width: 450px;
+            }
+          }
+      </code>
+    </pre>
+</section>
+
+
+<!-- animateMotion-->
+
+
       </div>
       <footer>
           <div class="copyright">
