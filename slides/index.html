@@ -59,7 +59,7 @@
             </section>
             <section>
                 <p>All slides are available at:</p>
-                <a href="https://erindepew.github.io/gdi-css-animations/css-animations/index.html#/">https://erindepew.github.io/gdi-css-animations/css-animations/index.html#/</a></p>
+                <a href="https://erindepew.github.io/gdi-css-animations/slides/index.html#/">https://erindepew.github.io/slides/css-animations/index.html#/</a></p>
             </section>
             <!-- Welcome-->
             <section class="hide-pdf">
@@ -228,6 +228,68 @@
           <li>Bonus: add a transition-timing-function to make it pretty</li>
         </ul>
     </section>
+
+  <section>
+      <h3>Applying transitions to a nested element</h3>
+      <pre> <code class = "html">
+        <li class="nav-list-item">nav item
+          <ul class="subnav-list">...</ul>
+        </li>
+    </code>
+    </pre>
+  </section>
+  <section>
+      <h3>Applying transitions to a nested element</h3>
+      <pre> <code class = "css">
+      .nav-list-item:hover .subnav-list { height: 250px; }
+    </code>
+    </pre>
+  </section>
+
+
+  <section>
+      <h3>Applying transitions to a sibling element</h3>
+      <pre> <code class = "html">
+        <li class="nav-list-item">sibling element </li>
+        <li class="nav-list-item">nav item </li>
+        <li class="nav-list-item">also a sibling element </li>
+    </code>
+    </pre>
+  </section>
+
+  <section>
+      <h3>Applying transitions to a sibling element</h3>
+      <pre> <code class = "css">
+      .nav-list-item:hover ~ li { color: white; }
+    </code>
+    </pre>
+  </section>
+
+  <section>
+      <h3>Applying transitions to an adjacent sibling element</h3>
+      <pre> <code class = "html">
+        <li class="nav-list-item">not an adjacent sibling element </li>
+        <li class="nav-list-item">nav item </li>
+        <li class="nav-list-item">adjacent sibling element </li>
+    </code>
+    </pre>
+  </section>
+
+  <section>
+      <h3>Applying transitions to an adjacent sibling element</h3>
+      <pre> <code class = "css">
+      .nav-list-item:hover + li { color: white; }
+    </code>
+    </pre>
+  </section>
+
+  <section>
+      <h3>Develop It!</h3>
+      <ul>
+        <li>Display the subnav when you hover over the "portfolio" button</li>
+        <li>Bonus: add a transition to all of the sibling elements when hovering over the "portfolio" button</li>
+      </ul>
+  </section>
 
     <!-- Transforms -->
 
@@ -402,7 +464,7 @@
          </ul>
       </section>
 
-<!--- Sprite sheet animations: Day 2 -->
+<!--- Sprite sheet animations -->
 
 <section data-background="#f05b62">
     <h1 style="color: #fafafa;">Sprite Sheet Animations</h1>
@@ -455,29 +517,6 @@
       <li> Bonus: change the animation to trigger on hover</li>
    </ul>
 </section>
-
-<!--- Day 2 -->
-
-<section data-background="#f05b62">
-    <h1 style="color: #fafafa;">Day 1 Review</h1>
-</section>
-
-<section>
-    <h3>What did we learn?</h3>
-    <ul>
-      <li> Transition CSS styles on hover, click, active... </li>
-      <li> Transform elements using scale, translate, skew, rotate...</li>
-      <li> Create an animation keyframe and apply it to an element</li>
-      <li> Combine a keyframe animation with a transform and transition on hover</li>
-      <li> Rendering and using a sprite sheet</li>
-   </ul>
-</section>
-
-<section>
-  <p>That's a lot already</p>
-    <img src="images/tired-cat.webp" style="padding: 10px; width:500px;" alt="tired cat" />
-</section>
-
 
 <!-- SVG animations -->
 
@@ -664,7 +703,7 @@
           <tr>
             <td style="border: 1px solid; padding: 10px;">fill</td>
             <td style="border: 1px solid; padding: 10px;">what happens after the animation is complete</td>
-          </tr> 
+          </tr>
         </table>
 </section>
 
@@ -763,7 +802,7 @@ keyTimes="0; 0.5; 0.8; 1" />
     <pre><code class="svg">
         <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
         <animate xlink:href="#my-circle" ... begin="click" id="firstAnimation"/>
-          <animate xlink:href="#my-circle" ... begin="firstAnimation.start" id="secondAnimation"/>
+          <animate xlink:href="#my-circle" ... begin="firstAnimation.begin" id="secondAnimation"/>
     </code></pre>
 </section>
 
@@ -773,7 +812,7 @@ keyTimes="0; 0.5; 0.8; 1" />
     <pre><code class="svg">
         <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
         <animate xlink:href="#my-circle" ... begin="click" id="firstAnimation"/>
-          <animate xlink:href="#my-circle" ... begin="firstAnimation.start + 1s" id="secondAnimation"/>
+          <animate xlink:href="#my-circle" ... begin="firstAnimation.begin + 1s" id="secondAnimation"/>
     </code></pre>
 </section>
 <section>
@@ -783,7 +822,7 @@ keyTimes="0; 0.5; 0.8; 1" />
       <li>Sync up each circle's animation with it's inner circle's animation end or beginning</li>
    </ul>
 </section>
-<section>
+<!-- <section>
   <h3>AnimateMotion</h3>
   <p>Used to move an element along a path</p>
   <img src="images/animateMotion.gif" style="padding: 10px; width:500px;" alt="SVG animation" />
@@ -820,7 +859,7 @@ keyTimes="0; 0.5; 0.8; 1" />
         <li>Add one of the circles as an mpath link</li>
         <li>Animate another circle to follow the path of the first circle</li>
      </ul>
-  </section>
+  </section> -->
 
   <section>
       <h3>Resources</h3>
